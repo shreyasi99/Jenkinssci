@@ -2,10 +2,6 @@ Job('job-dsl-plugin') {
   definition {
     cpsScm {
       scm {
-      stage ('Checkout code'){
-      steps {
-      checkout scm
-      }
       
         git {
           remote {
@@ -18,4 +14,4 @@ Job('job-dsl-plugin') {
     }
   }
 }
-}
+
