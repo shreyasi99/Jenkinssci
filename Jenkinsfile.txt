@@ -1,0 +1,15 @@
+Job('job-dsl-plugin') {
+  definition {
+    cpsScm {
+      scm {
+        git {
+          remote {
+            url('https://github.com/shreyasi99/Jenkinssci.git')
+          }
+       branch('*/main')
+        }
+      }
+      lightweight()
+    }
+  }
+}
