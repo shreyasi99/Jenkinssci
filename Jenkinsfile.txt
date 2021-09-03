@@ -2,6 +2,11 @@ Job('job-dsl-plugin') {
   definition {
     cpsScm {
       scm {
+      stage ('Checkout code'){
+      steps {
+      checkout scm
+      }
+      
         git {
           remote {
             url('https://github.com/shreyasi99/Jenkinssci.git')
@@ -12,4 +17,5 @@ Job('job-dsl-plugin') {
       lightweight()
     }
   }
+}
 }
