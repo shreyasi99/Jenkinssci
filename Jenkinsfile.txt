@@ -1,4 +1,4 @@
-Job('job-dsl-plugin') {
+pipelineJob('job-dsl-plugin') {
   definition {
     cpsScm {
       scm {
