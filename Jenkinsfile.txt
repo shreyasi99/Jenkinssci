@@ -2,18 +2,6 @@ Job('job-dsl-plugin') {
   definition {
     cpsScm {
       scm {
-      pipeline {
-      agent any 
-      stages {
-       stage ('Checkout') {
-           steps {
-             script {
-             sh "git checkout main"
-                    }
-             checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/shreyasi99/Jenkinssci.git']]])
-               }
-               }
-               }
         git {
           remote {
             url('https://github.com/shreyasi99/Jenkinssci.git')
@@ -24,6 +12,5 @@ Job('job-dsl-plugin') {
       lightweight()
     }
   }
-}
 }
 
